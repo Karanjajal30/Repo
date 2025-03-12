@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GreenLeaf Organics - Homepage</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Additional styles for Account Forms */
+    #account {
+      margin-top: 40px;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    #account h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .forms {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .form-container {
+      flex: 0 0 48%;
+      margin-bottom: 20px;
+    }
+    .form-container form {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .form-container label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    .form-container input[type="email"],
+    .form-container input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .form-container input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin-top: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .form-container input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    
+    /* Responsive adjustments for account forms */
+    @media (max-width: 768px) {
+      .form-container {
+        flex: 0 0 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Falling Snowflakes will be added via JS -->
+  <!-- Header with Hero Image & Overlay Text -->
+  <header>
+    <div class="hero-text">
+      <h1>GreenLeaf Organics</h1>
+      <p>Your trusted source for organic goodness in Hyderabad</p>
+    </div>
+  </header>
+  
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Homepage</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Main Content -->
+  <main>
+    <!-- Introduction -->
+    <section id="intro" class="container">
+      <h2>Welcome</h2>
+      <p>
+        At GreenLeaf Organics, we bring you the freshest organic produce and products. Join our journey towards a healthier, sustainable lifestyle.
+      </p>
+    </section>
+    
+    <!-- Image Carousel -->
+    <section id="gallery" class="container">
+      <h2>Gallery</h2>
+      <div id="carousel">
+        <img src="https://th.bing.com/th/id/OIG3.8mid478vdl5SklKLj8HQ?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Gallery Image 1" class="active" />
+        <img src="https://th.bing.com/th/id/OIG3.bHSX013yxbMviwXoK70W?pid=ImgGn" alt="Gallery Image 2" />
+        <img src="https://th.bing.com/th/id/OIG3.UOFDsXjZ78LD7rn_cZJl?pid=ImgGn" alt="Gallery Image 3" />
+      </div>
+    </section>
+    
+    <!-- News & Events -->
+    <section id="news" class="container">
+      <h2>News &amp; Events</h2>
+      <p>Check out our latest updates and social media posts.</p>
+      <!-- YouTube Video Embed -->
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/HC52RrASIak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <!-- Facebook Embed -->
+      <div class="fb-container">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid03314pW22ZK8JkMEJXhMG9bEQVh4oTmR7MLe6Pob56SF6zHJtMxamLVk76LzAjAS5il%26id%3D61573767850457&show_text=true&width=500" width="500" height="665" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+      </div>
+    </section>
+    
+    <!-- Account Section -->
+    <section id="account" class="container">
+      <h2>Create an Account or Log In</h2>
+      <div class="forms">
+        <!-- Signup Form -->
+        <div class="form-container">
+          <h3>Sign Up</h3>
+          <form action="/signup" method="POST">
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email" name="email" placeholder="Enter your email" required>
+  
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" name="password" placeholder="Enter your password" required>
+  
+            <input type="submit" value="Sign Up">
+          </form>
+        </div>
+        
+        <!-- Login Form -->
+        <div class="form-container">
+          <h3>Log In</h3>
+          <form action="/login" method="POST">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
+  
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+  
+            <input type="submit" value="Log In">
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="container">
+    <p>&copy; 2025 GreenLeaf Organics. All Rights Reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+  </footer>
+  
+  <script src="scripts.js"></script>
+</body>
+</html>
